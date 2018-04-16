@@ -132,6 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 .filter-options select {
   background-color: #fff;
   border: 2px solid #fff;
+  border-radius: 4px;
   font-family: Arial,sans-serif;
   font-size: 12px;
   color: #3397DB;
@@ -160,7 +161,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .restaurants-listing li {
   background-color: #fff;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-family: Arial,sans-serif;
   margin: 14px 0;
   width: 240px;
@@ -197,7 +199,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0 0 0;
 }
 .restaurants-listing li a {
-  background-color: #f18200;;
+  background-color: #f18200;
+  border-radius: 4px;
   color: #fff;
   font-size: 14px;
   height: 48px;
@@ -324,6 +327,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 10px;
   grid-column: 2 / span 2;
   text-align: end;
+  line-height: 20px;
 }
 #reviews-list li p:nth-of-type(3) {
   grid-column: 1;

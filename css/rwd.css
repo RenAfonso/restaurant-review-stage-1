@@ -1,0 +1,46 @@
+@media screen and (min-width: 740px) {
+    .page-title a {
+        font-size: 18px;
+    }
+    .filter-options h2 {
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+    .filter-options select {
+        font-size: 16px;
+        width: 250px;
+    }
+    .restaurants-listing {
+        overflow: none;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .restaurants-listing li {
+        padding: 20px 40px;
+    }
+    .restaurants-listing li:first-of-type {
+        margin-left: 0px;
+    }
+    
+    .restaurant-container h1 {
+        text-align: center;
+    }
+    .restaurant-container img {
+        width: 500px;
+    }
+    #restaurant-cuisine {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    #restaurant-address {
+        font-size: 20px;
+    }
+    #restaurant-hours {
+        font-size: 16px;
+    }
+    #reviews-list li p:nth-of-type(3) {
+        text-align: center;
+    }
+}
