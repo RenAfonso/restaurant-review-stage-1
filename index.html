@@ -10,16 +10,16 @@
   <title>Restaurant Reviews</title>
 </head>
 
-<body>
+<body class="start-page">
   <header>
-    <nav>
+    <nav class="page-nav">
       <h1 class="page-title"><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <main id="maincontent">
-    <section id="map-container">
-      <div id="map"></div>
+  <main class="main-content" id="maincontent">
+    <section class="map-container" id="map-container">
+      <div class="map" id="map"></div>
     </section>
     <section class="restaurants">
       <div class="filter-options">
@@ -31,7 +31,7 @@
           <option value="all">All Cuisines</option>
         </select>
       </div>
-      <ul id="restaurants-list"></ul>
+      <ul class="restaurants-listing" id="restaurants-list"></ul>
     </section>
   </main>
 
@@ -40,7 +40,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJNkpHYXSUx4bwoWN1Pj_U9A7DQNWARTI&libraries=places&callback=initMap"></script>
 
 
-  <footer id="footer">
+  <footer class="footer" id="footer-list">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
