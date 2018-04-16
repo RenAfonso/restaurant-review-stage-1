@@ -44,3 +44,124 @@
         text-align: center;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .page-nav {
+        padding: 10px 0;
+    }
+    .page-title a {
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 5px;
+    }
+    #breadcrumb {
+        padding: 10px 40px 16px;
+        list-style: none;
+        background-color: #eee;
+        font-size: 22px;
+        margin: 0;
+        width: calc(100% - 80px);
+        box-shadow: 0 2px 2px rgba(51, 51, 51, 0.4)
+    }
+    
+    /* ====================== Map && Restaurants ====================== */
+    .map {
+        height: 500px;
+    }
+    
+    .filter-options {
+        grid-template-columns: 5fr 0.6fr 1.6fr 1.6fr 5fr;
+        grid-column-gap: 25px;
+      }
+    .filter-options h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-align: right;
+        grid-column: 2;
+      }
+    .filter-options select {
+        font-size: 16px;
+        width: 200px;
+    }
+    .restaurants-listing {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .restaurants-listing li {
+        padding: 20px 40px;
+    }
+    /* ====================== Restaurant Details ====================== */
+    .inside #maincontent {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .inside header {
+        top: 0;
+        z-index: 1;
+        box-shadow: 0 0 0;
+        position: inherit;
+    }
+    .inside #footer {
+        bottom: 0;
+        width: 100%;
+    }
+    .inside #map {
+        height: 735px;
+    }
+    .restaurant-container{
+        background-color: #fff;
+        height: 735px;
+    }
+    .restaurant-container h1 {
+        margin: 20px 0 20px 0;
+        font-size: 26px;
+    }
+    .restaurant-container img {
+
+    }
+    #restaurant-address {
+
+    }
+    #restaurant-cuisine {
+        font-size: 24px;
+    }
+    #restaurant-hours {
+
+    }
+    .reviews-container {
+        grid-column: 1 / span 2;
+    }
+    .reviews-container h2 {
+        text-align: center;
+        font-size: 26px;
+    }
+    #reviews-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #reviews-list li {
+        grid-template-rows: 50px 50px 280px;
+        height: 400px;
+    }
+    #reviews-list li:last-of-type {
+
+    }
+    #reviews-list li p {
+
+    }
+    #reviews-list li p:nth-of-type(1) {
+        font-size: 16px;
+    }
+    #reviews-list li p:nth-of-type(2) {
+
+    }
+    #reviews-list li p:nth-of-type(3) {
+        font-size: 16px;
+    }
+    #reviews-list li p:nth-of-type(4) {
+        font-size: 16px;
+        margin: 0 15px 0 15px;
+        height: 290px;
+        text-overflow: ellipsis;
+    }
+      
+}
