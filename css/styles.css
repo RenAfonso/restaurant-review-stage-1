@@ -70,12 +70,12 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 10px 40px 16px 14px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(100% - 80px);
+    width: calc(100% - 54px);
     box-shadow: 0 2px 2px rgba(51, 51, 51, 0.4)
 }
 
@@ -243,6 +243,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
   margin: 120px 0 20px 0;
   text-transform: uppercase;
+  text-align: center;
+}
+.restaurant-picture {
+  align-self: center;
 }
 .restaurant-container img {
 	background-color: #ccc;
@@ -306,7 +310,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 85%;
   display: grid;
-  grid-template-columns: 1.4fr 2fr 1fr;
+  grid-template-columns: 1.5fr 2fr 1fr;
   grid-template-rows: repeat (3, 1fr);
 }
 #reviews-list li:last-of-type {

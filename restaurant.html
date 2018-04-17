@@ -25,7 +25,10 @@
 
     <section class="restaurant-container">
       <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
+      <picture class="restaurant-picture">
+        <source id="restaurant-media" media="(min-width: 740px)">
+        <img id="restaurant-img">
+      </picture>
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
       <table id="restaurant-hours"></table>
@@ -55,3 +58,6 @@
 </body>
 
 </html>
+
+<!-- <source media="(min-width: 900px)" srcset="img/cool_desk_large.png 1x, img/cool_desk_large@2x.png 2x">
+  <img src="img/cool_desk_small.png" srcset="img/cool_desk_small.png 1x, img/cool_desk_small@2x.png 2x" alt="Icon with a top view of a modern desk"> -->
