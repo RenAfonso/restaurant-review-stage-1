@@ -60,9 +60,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
-  image.alt = 'A picture of ' + restaurant.name;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.srcset = DBHelper.srcsetUrlForRestaurant(restaurant);
+  image.alt = 'A picture of ' + restaurant.name;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -166,3 +166,4 @@ getParameterByName = (name, url) => {
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+

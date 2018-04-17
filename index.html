@@ -12,6 +12,7 @@
 </head>
 
 <body class="start-page">
+  <a href="#filter-text" class="skip-link">Skip to filter</a>
   <header>
     <nav class="page-nav">
       <h1 class="page-title"><a href="/">Restaurant Reviews</a></h1>
@@ -24,7 +25,7 @@
     </section>
     <section class="restaurants">
       <div class="filter-options">
-        <h2>Filter</h2>
+        <h2 id="filter-text" tabindex="-1">Filter</h2>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
@@ -48,6 +49,3 @@
 </body>
 
 </html>
-
-<!-- <source media="(min-width: 900px)" srcset="img/cool_desk_large.png 1x, img/cool_desk_large@2x.png 2x">
-  <img src="img/cool_desk_small.png" srcset="img/cool_desk_small.png 1x, img/cool_desk_small@2x.png 2x" alt="Icon with a top view of a modern desk"> -->

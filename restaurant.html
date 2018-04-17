@@ -12,6 +12,7 @@
 </head>
 
 <body class="inside">
+  <a href="#restaurant-name" class="skip-link">Skip to restaurant info</a>
   <header>
     <nav class="page-nav">
       <h1 class="page-title"><a href="/">Restaurant Reviews</a></h1>
@@ -23,8 +24,12 @@
 
   <main class="main-content" id="maincontent">
 
+    <section class="map-container" id="map-container">
+      <div class="map" id="map"></div>
+    </section>
+
     <section class="restaurant-container">
-      <h1 id="restaurant-name"></h1>
+      <h1 id="restaurant-name" tabindex="-1"></h1>
       <picture class="restaurant-picture">
         <source id="restaurant-media" media="(min-width: 740px)">
         <img id="restaurant-img">
@@ -34,12 +39,8 @@
       <table id="restaurant-hours"></table>
     </section>
 
-    <section class="map-container" id="map-container">
-        <div class="map" id="map"></div>
-    </section>
-
     <section class="reviews-container" id="reviews-container">
-      <ul id="reviews-list"></ul>
+      <ul id="reviews-list" tabindex="-1"></ul>
     </section>
 
   </main>
@@ -58,6 +59,3 @@
 </body>
 
 </html>
-
-<!-- <source media="(min-width: 900px)" srcset="img/cool_desk_large.png 1x, img/cool_desk_large@2x.png 2x">
-  <img src="img/cool_desk_small.png" srcset="img/cool_desk_small.png 1x, img/cool_desk_small@2x.png 2x" alt="Icon with a top view of a modern desk"> -->

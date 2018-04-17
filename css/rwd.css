@@ -1,3 +1,9 @@
+@media screen and (min-width: 425px) {
+    #reviews-list li {
+        grid-template-columns: 121px 2fr 1fr;
+    }
+}
+
 @media screen and (min-width: 600px) {
     .filter-options h2 {
         font-size: 16px;
@@ -20,10 +26,10 @@
         font-size: 16px;
         margin-left: 30px;
     }
-    #reviews-list li p:nth-of-type(3) {
-        text-align: center;
+    .reviews-container h2 {
+        padding: 10px 10px 10px 30px;
+        width: calc(100% - 40px);
     }
-
 }
 
 @media screen and (min-width: 740px) {
@@ -111,6 +117,7 @@
     }
     .inside #map {
         height: 735px;
+        margin: 0;
     }
     .restaurant-container{
         background-color: #fff;
@@ -134,6 +141,7 @@
         grid-template-columns: repeat(3, 1fr);
     }
     #reviews-list li {
+        grid-template-columns: 100px 2fr 1fr;
         grid-template-rows: 50px 50px 280px;
         height: 400px;
     }
@@ -153,9 +161,9 @@
     
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1600px) {
     body {
-        width: 1440px;
+        width: 1600px;
         margin: auto;
         background-color: #fcfcfc;
     }
