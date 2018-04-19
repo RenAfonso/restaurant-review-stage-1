@@ -91,7 +91,8 @@ self.addEventListener('activate', function(event) {
                 })
             )
         }).catch(function (error) {
-            console.log('unable to resolve ' + error);
+            // on first run, it should log this error
+            console.log('no cache to delete');
             return
         })
     );

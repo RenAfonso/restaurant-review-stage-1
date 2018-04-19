@@ -1,3 +1,4 @@
+//registers serviceworker (no scope declaration needed)
 if ('serviceWorker' in navigator) {
     console.log('Service worker registration in progress.');
     navigator.serviceWorker.register('/sw.js').then(function() {

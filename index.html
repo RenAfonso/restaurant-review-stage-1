@@ -20,16 +20,16 @@
   </header>
 
   <main class="main-content" id="maincontent">
-    <section class="map-container" id="map-container">
+    <section class="map-container" id="map-container" role="presentation">
       <div class="map" id="map"></div>
     </section>
     <section class="restaurants">
       <div class="filter-options">
         <h2 id="filter-text" tabindex="-1">Filter</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select id="neighborhoods-select" name="neighborhoods" role="listbox" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select id="cuisines-select" name="cuisines" role="listbox" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>

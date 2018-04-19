@@ -1,9 +1,15 @@
+/*
+ * fixed width on reviews for larger mobiles
+ */
 @media screen and (min-width: 425px) {
     #reviews-list li {
         grid-template-columns: 121px 2fr 1fr;
     }
 }
 
+/*
+ * Minor font size transition for horizontal viewing
+ */
 @media screen and (min-width: 600px) {
     .filter-options h2 {
         font-size: 16px;
@@ -32,6 +38,9 @@
     }
 }
 
+/*
+ * tablet screens
+ */
 @media screen and (min-width: 740px) {
     .page-title a {
         font-size: 18px;
@@ -58,6 +67,9 @@
 
 }
 
+/*
+ * Page layout change for laptops
+ */
 @media screen and (min-width: 1024px) {
     .page-nav {
         padding: 10px 0;
@@ -161,6 +173,9 @@
     
 }
 
+/*
+ * On larger screens and 4k, the website gets a fixed width ro prevent element distortion
+ */
 @media screen and (min-width: 1600px) {
     body {
         width: 1600px;
