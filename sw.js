@@ -1,4 +1,5 @@
-let version = 'restaurant-reviews-v1'
+// service worker variables. The big array below takes into account all possible screen resolutions.
+let version = 'r-reviews-v1-'
 let cachedArray = [
     '/',
     './index.html',
@@ -51,9 +52,11 @@ let cachedArray = [
     '/img/small10@2x.jpg'
 ];
 
-self.addEventListener("install", function(event) {
+
+// installation of service worker as per service work lesson, creates cache r-reviews-v1-core with the content of the above array
+self.addEventListener('install', function(event) {
     console.log('installing worker');
-    event.waitUntil(caches.open(version + 'fundamentals')
+    event.waitUntil(caches.open(version + 'core')
         .then(function(cache) {
             return cache.addAll(cachedArray);
         })
@@ -63,58 +66,33 @@ self.addEventListener("install", function(event) {
     );
 });
 
-self.addEventListener("fetch", function(event) {
+// fetches the network for updates
+self.addEventListener('fetch', function(event) {
     console.log('fetching');
-    if (event.request.method !== 'GET') {
-        console.log('WORKER: fetch event ignored.', event.request.method, event.request.url);
-        return;
-    }
-
+    
     event.respondWith(
-        caches.match(event.request).then(function(cached) {
-            let networked = fetch(event.request)
-                .then(fetchedFromNetwork, unableToResolve)
-                .catch(unableToResolve);
-            console.log('WORKER: fetch event', cached ? '(cached)' : '(network)', event.request.url);
-            return cached || networked;
-  
-            function fetchedFromNetwork(response) {
+      caches.match(event.request).then(function(response) {
+        return response || fetch(event.request);
+      })
+    );
+});
 
-                let cacheCopy = response.clone();
-  
-                console.log('WORKER: fetch response from network.', event.request.url);
-  
-                caches.open(version + 'pages').then(function add(cache) {
-                /* We store the response for this request. It'll later become
-                   available to caches.match(event.request) calls, when looking
-                   for cached responses.
-                */
-                    cache.put(event.request, cacheCopy);
+// deletes old cache, as per service worker lesson (note: I decided to keep this as it isn't a project rubric but seemed relevant)
+self.addEventListener('activate', function(event) {
+    console.log('activating');
+    
+    event.waitUntil(
+        caches.keys().then(function(cacheNames) {
+            return Promise.all(
+                cacheNames.filter(function(cacheName) {
+                    return cacheName.startsWith('r-reviews-') && cacheName != version;
+                }).map(function(cacheName) {
+                    return cache.delete(cacheName);
                 })
-                .then(function() {
-                    console.log('WORKER: fetch response stored in cache.', event.request.url);
-                });
-  
-                return response;
-            }
-  
-            function unableToResolve () {
-            /* There's a couple of things we can do here.
-               - Test the Accept header and then return one of the `offlineFundamentals`
-                 e.g: `return caches.match('/some/cached/image.png')`
-               - You should also consider the origin. It's easier to decide what
-                 "unavailable" means for requests against your origins than for requests
-                 against a third party, such as an ad provider
-               - Generate a Response programmaticaly, as shown below, and return that
-            */
-  
-                console.log('WORKER: fetch request failed in both cache and network.');
-  
-            /* Here we're creating a response programmatically. The first parameter is the
-               response body, and the second one defines the options for the response.
-            */
-                return new Response('Page load has failed');
-            }
+            )
+        }).catch(function (error) {
+            console.log('unable to resolve ' + error);
+            return
         })
     );
 });
